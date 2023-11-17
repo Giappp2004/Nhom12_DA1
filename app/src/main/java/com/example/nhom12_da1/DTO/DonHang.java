@@ -1,6 +1,7 @@
 package com.example.nhom12_da1.DTO;
 
 public class DonHang {
+    private int maDon;
     private String tenDon ;
     private String sizeGiayDon;
     private String soLuongDon;
@@ -10,12 +11,21 @@ public class DonHang {
     public DonHang() {
     }
 
-    public DonHang(String tenDon, String sizeGiayDon, String soLuongDon, int giaDon, String hangDon) {
+    public DonHang(int maDon, String tenDon, String sizeGiayDon, String soLuongDon, int giaDon, String hangDon) {
+        this.maDon = maDon;
         this.tenDon = tenDon;
         this.sizeGiayDon = sizeGiayDon;
         this.soLuongDon = soLuongDon;
         this.giaDon = giaDon;
         this.hangDon = hangDon;
+    }
+
+    public int getMaDon() {
+        return maDon;
+    }
+
+    public void setMaDon(int maDon) {
+        this.maDon = maDon;
     }
 
     public String getTenDon() {

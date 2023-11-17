@@ -34,6 +34,10 @@ public class ChuHangDAO {
         values.put("matkhau",obj.getMatKhau());
         return db.update("ChuHang",values,"maCH = ?",new String[]{String.valueOf(obj.getMaCH())});
     }
+    public long delete(String id) {
+        return db.delete("ChuHang", "maCH = ?", new String[]{String.valueOf(id)});
+    }
+
 
     public List<ChuHang> getAll(){
         String sql = "select * from ChuHang";
